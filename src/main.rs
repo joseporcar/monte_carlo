@@ -7,7 +7,7 @@ fn main() {
             c += 1; 
         }
     }
-    println!("total beans = {n}\nWithin Circle = {c}\n Area = {}", c as f64 / n as f64)
+    println!("total beans = {n}\nWithin Circle = {c}\n Area (radius is 0.5) = {}", c as f64 / n as f64)
 }
 
 
