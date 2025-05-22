@@ -22,10 +22,14 @@ impl Point {
         Point(0.5, 0.5)
     }
 
+    fn distance(&self, other: &Point) -> f64 {
+        let Point(x_p1, y_p1) = self;
+        let Point(x_p2, y_p2) = other;
+        ((x_p1-x_p2).powi(2) + (y_p1-y_p2).powi(2)).sqrt()
+    }
+
     fn in_circle(&self, center: &Point) -> bool {
-        let Point(x, y) = self;
-        let Point(xc, yc) = center;
-        ((x-xc).powi(2) + (y-yc).powi(2)).sqrt() < 0.5
+        self.distance(center) < 0.5
     }
 }
 
